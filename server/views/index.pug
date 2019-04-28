@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  
+  if !latestTemp
+    p No data available for today
+  else
+    if latestTemp < 21 || latestTemp > 27 
+      .alert.alert-danger(role='alert').mt-2.text-center
+          strong #{latestTemp}ºC&nbsp;
+          | at #{latestTempTime}
+    else
+      .alert.alert-primary(role='alert').mt-2.text-center
+          strong #{latestTemp}ºC&nbsp;
+          | at #{latestTempTime}
+
+    div.ct-chart
+  
+  if latestTemp
+    script.
+      new Chartist.Line('.ct-chart', !{chartData}, {
+        height: 500,
+        axisY: {
+          high: 30,
+          low: 15,
+          offset: 60,
+          labelInterpolationFnc: function(value) {
+            return value + 'ºC';
+          }
+        }
+      });

@@ -1,0 +1,9 @@
+{
+  "ssid": "Wifi Network Name",
+  "psk": "Wifi password",
+  "knodge_user_key": "your_knodge_user_key",
+  "knodge_thing_key": "your_knodge_thing_key",
+  "target": "https://api.knodge.com/v1/",
+  "interval": 900,
+  "fishbotpsk": "a_secret_string_shared_with_the_server"
+}

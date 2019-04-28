@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Fishbot
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css')
+    script(src='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js')
+    link(rel='stylesheet', href='stylesheets/style.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    link(rel='apple-touch-icon', href='images/blue-fish.png')
+    meta(name='apple-mobile-web-app-title', content='Fishbot')
+    link(rel='shortcut icon', type='image/png', href='images/blue-fish.png')
+        
+    meta(http-equiv='Cache-Control', content='no-cache, no-store, must-revalidate')
+    meta(http-equiv='Pragma', content='no-cache')
+    meta(http-equiv='Expires', content='0')
+
+  body
+  
+    .container-fluid
+      nav.navbar.navbar.navbar-dark.bg-primary
+        a.navbar-brand(href='#') Fishbot
+        img(src='images/blue-fish.png',width='50')
+      block content
+
+    .p-3
+      small.text-muted By PJ Evans. Fish icon by stockio.com.
+      
